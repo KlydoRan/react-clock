@@ -17,6 +17,7 @@ import {
 
 export default function Clock({
   className,
+  handsColor = 'black',
   hourHandLength = 50,
   hourHandOppositeLength,
   hourHandWidth = 4,
@@ -106,6 +107,7 @@ export default function Clock({
         name="hour"
         oppositeLength={hourHandOppositeLength}
         width={hourHandWidth}
+        color={handsColor}
       />
     );
   }
@@ -128,6 +130,7 @@ export default function Clock({
         name="minute"
         oppositeLength={minuteHandOppositeLength}
         width={minuteHandWidth}
+        color={handsColor}
       />
     );
   }
@@ -148,7 +151,7 @@ export default function Clock({
         length={secondHandLength}
         name="second"
         oppositeLength={secondHandOppositeLength}
-        width={secondHandWidth}
+        width={secondHandWidth}     
       />
     );
   }
@@ -175,6 +178,7 @@ Clock.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  handsColor: PropTypes.string,
   hourHandLength: isHandLength,
   hourHandOppositeLength: isOppositeHandLength,
   hourHandWidth: isHandWidth,
