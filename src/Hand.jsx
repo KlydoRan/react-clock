@@ -9,6 +9,7 @@ export default function Hand({
   length = 100,
   oppositeLength = 10,
   width = 1,
+  color = 'black',
 }) {
   return (
     <div
@@ -23,6 +24,7 @@ export default function Hand({
           width: `${width}px`,
           top: `${50 - (length / 2)}%`,
           bottom: `${50 - (oppositeLength / 2)}%`,
+          color: color,  
         }}
       />
     </div>
@@ -35,4 +37,5 @@ Hand.propTypes = {
   name: PropTypes.string.isRequired,
   oppositeLength: isHandLength,
   width: PropTypes.number,
+  color: ProtTypes.string,
 };
