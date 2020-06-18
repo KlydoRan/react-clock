@@ -17,7 +17,7 @@ import {
 
 export default function Clock({
   className,
-  handsColor = 'black',
+  handsColor,
   hourHandLength = 50,
   hourHandOppositeLength,
   hourHandWidth = 4,
