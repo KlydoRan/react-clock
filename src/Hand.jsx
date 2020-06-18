@@ -9,7 +9,7 @@ export default function Hand({
   length = 100,
   oppositeLength = 10,
   width = 1,
-  color = 'black',
+  color,
 }) {
   return (
     <div
